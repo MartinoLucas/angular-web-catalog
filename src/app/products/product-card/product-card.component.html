@@ -1,0 +1,58 @@
+<div class="product-card">
+    <div class="product-header">
+      @if (!product.name) {
+        <h3 class="product-winery">{{ product.Winery }}</h3>
+        <span class="product-brand">{{ product.Brand }}</span>
+
+      }@else {
+        <h3 class="product-winery">{{ product.name }}</h3>
+      }
+    </div>
+
+    @if (product.Image) {
+      <img
+        class="product-image"
+        src="{{ product.Image }}"
+        alt="{{ product.Brand }}"
+      />
+    }@else {
+      <img
+        class="product-image"
+        src="assets/sad_wine_bottle_no_bg.png"
+        alt="no-wine-to-see"
+      />
+    }
+
+    @if (product.Description != "") {
+      <p class="product-description"><b>Description:</b> {{ product.Description }}</p>
+    }@else{
+      <p class="product-description"><b>Description:</b> No description available</p>
+    }
+  
+    @if (product.Stock == 0) {
+      <p class="product-out-of-stock">Out of stock</p>
+    }@else if (!product.Stock) {
+      <p class="product-out-of-stock">Stock not available</p>
+    }
+    @else {
+      <p class="product-stock"><b>Stock:</b> {{product.Stock}}</p>
+    }
+
+    <div class="product-details">
+      @if (
+        product.Grape &&
+        product.Year
+      ) {
+        <p><span>Grape:</span> {{ product.Grape }}</p>
+        <p><span>Year:</span> {{ product.Year }}</p>
+      }@else {
+        <p><b>Grape:</b> Not available</p>
+        <p><b>Year:</b> Not available</p>
+      }
+      <p class="product-price">
+        <span>Price:</span>
+        ${{ product.Price }}
+      </p>
+    </div>
+  </div>
+  

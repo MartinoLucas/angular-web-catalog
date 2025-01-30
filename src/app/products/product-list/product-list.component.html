@@ -1,0 +1,22 @@
+@let products = jsonData();
+
+@defer(on viewport){
+    <div class="product-container">
+        <!-- Insert one or more product-card components here -->
+        @for (product of products; track $index) {
+            <app-product-card [product]="product" ></app-product-card>
+        }
+    </div>
+}@placeholder {
+    <div class="product-container">
+        no products to see here
+    </div>
+}@loading {
+    <div class="product-container">
+        loading products...
+    </div>
+}@error {
+    <div class="product-container">
+        error loading products
+    </div>
+}

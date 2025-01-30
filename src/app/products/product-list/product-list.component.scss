@@ -1,0 +1,19 @@
+.product-container {
+    /* Center the container and define a max width */
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+  
+    /* Use a responsive grid layout */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  
+    /* Optionally, add a background or border to the container */
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    
+    /* A simple box-shadow for a subtle effect (optional) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
