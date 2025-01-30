@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Product } from '../products/product';
 import { Observable } from 'rxjs';
-
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
@@ -17,7 +17,7 @@ export class ProductService {
     return this.http.get<Product[]>(`/api/products/getAll`);
   }
   getNodeBackendData(): Observable<Product[]> {
-    return this.http.get<Product[]>(`/api/data`);
+    return this.http.get<Product[]>(`${environment.apiUrl}/data`);
   }
 
 }

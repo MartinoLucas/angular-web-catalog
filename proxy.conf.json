@@ -10,8 +10,8 @@
       "changeOrigin": true
     },
     "/api": {
-    "target": "http://localhost:3000",
-    "secure": false,
+    "target": "https://node-web-catalog-backend.vercel.app/",
+    "secure": true,
     "changeOrigin": true,
     "pathRewrite": {
       "^/api": ""
