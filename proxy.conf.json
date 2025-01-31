@@ -4,12 +4,12 @@
       "secure": true,
       "changeOrigin": true
     },
-    "/apiJava": {
+    "/api": {
       "target": "http://localhost:8080",
       "secure": false,
       "changeOrigin": true
     },
-    "/api": {
+    "/apiProd": {
     "target": "https://node-web-catalog-backend.vercel.app/",
     "secure": true,
     "changeOrigin": true,

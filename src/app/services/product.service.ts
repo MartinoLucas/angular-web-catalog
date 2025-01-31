@@ -10,12 +10,12 @@ export class ProductService {
 
   private http = inject(HttpClient);
 
-  getJsonData(): Observable<Product[]> {
+  /*getJsonData(): Observable<Product[]> {
     return this.http.get<Product[]>(`/api/s7BR0Dy`);
   }
   getJavaBackendData(): Observable<Product[]> {
     return this.http.get<Product[]>(`/api/products/getAll`);
-  }
+  }*/
   getNodeBackendData(): Observable<Product[]> {
     return this.http.get<Product[]>(`${environment.apiUrl}/data`);
   }
